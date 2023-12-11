@@ -8,7 +8,19 @@ app = Flask(__name__)
 #     json_text = jsonify(some_data)
 #     return json_text  
 
-todos = [{"label":"My first task", "done":False}]
+todos = [
+    {
+        "label":"My first task", 
+        "done":False
+    },
+        {
+        "done": True,
+        "label": "Sample Todo 1"
+    },
+    {
+        "done": True,
+        "label": "Sample Todo 2"
+    }]
 
 @app.route('/todos', methods=["GET"])
 def hello():
